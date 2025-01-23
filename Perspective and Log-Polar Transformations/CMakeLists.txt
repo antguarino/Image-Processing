@@ -1,0 +1,22 @@
+rit_add_library(ipcv_geometric_transformation
+  SOURCES
+    MapGCP.cpp
+    MapQ2Q.cpp
+    MapRST.cpp
+    MapPolar.cpp
+    Remap.cpp
+  HEADERS
+    MapGCP.h
+    MapQ2Q.h
+    MapRST.h
+    MapPolar.h
+    Remap.h
+    GeometricTransformation.h
+)
+
+target_link_libraries(ipcv_geometric_transformation 
+  PUBLIC 
+    Eigen3::Eigen
+    opencv_core
+  PRIVATE
+)
